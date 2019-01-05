@@ -1,0 +1,46 @@
+public class SZDuiLie 
+{
+	int data[];
+	int head;
+	int tail;
+	public SZDuiLie()
+	{
+		this.data=new int[10];
+		head=tail=0;
+	}
+	public SZDuiLie(int size)
+	{
+		this.data=new int[size];
+		head=tail=0;
+	}
+	public boolean inQueue(int num)
+	{
+		if(head==(tail+1)%data.length)
+			return false;
+		tail=(tail+1)%data.length;
+		data[tail] = num;
+		return true;
+	}
+	public int outQueue()
+	{
+		if(head==tail)
+			return -1;
+		head=(head+1)%data.length;
+		return data[head];
+	}
+	public boolean isEmpty()
+	{
+		return head==tail;
+	}
+	public boolean isFull()
+	{
+		return head==(tail+1)%data.length;
+	}
+	public int gethead()
+	{
+		if(head==tail)
+			return -1;
+		return data[(head+1)%data.length];
+	}
+
+}
