@@ -1,0 +1,71 @@
+public class App {
+
+	public static void main(String[] args) {
+		App ceshi=new App();
+		//ceshi.szzhan();
+		//ceshi.szduilie();
+		//ceshi.lbduilie();
+		//ceshi.lbzhan();
+	}
+		
+		public void szzhan()
+		{
+		SZzhan<Integer> num=new SZzhan<Integer>();
+		
+		num.push(10);
+		num.push(20);
+		num.push(30);
+		num.push(40);
+		num.push(50);
+		while(!num.isEmpty())
+		{
+			System.out.println(num.pop());
+		}
+		
+		}
+        public void lbduilie()
+        {
+		LBDuiLie num=new LBDuiLie();
+		
+		num.inQueue(10);
+		num.inQueue(20);
+		num.inQueue(30);
+		num.inQueue(40);
+		num.inQueue(50);
+		while(!num.isEmpty())
+		{
+			System.out.println(num.outQueue());
+		}
+        }
+		
+		
+		public void szduilie()
+		{
+		SZDuiLie num=new SZDuiLie();
+		num.inQueue(10);
+		num.inQueue(20);
+		num.inQueue(30);
+		num.inQueue(40);
+		num.inQueue(50);
+		while(!num.isEmpty())
+		{
+			System.out.println(num.outQueue());
+		}
+		}
+		
+		
+		public void lbzhan()
+		{
+		LBzhan num=new LBzhan();
+		num.push(10);
+		num.push(20);
+		num.push(30);
+		num.push(40);
+		num.push(50);
+		while(!num.isEmpty())
+		{
+			System.out.println(num.pop());
+		}
+
+	}
+}
