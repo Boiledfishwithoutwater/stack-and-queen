@@ -1,0 +1,27 @@
+public class LBzhan 
+{
+ private Node top;
+ public void Node()
+ {
+	 this.top=null;
+ }
+ 
+ public boolean push(int num)
+ {
+	 Node p=new Node(num);
+	 p.next=this.top;
+	 this.top=p;
+	 return true;
+ }
+ public int pop()
+ {
+	 if(top==null) return -1;
+	 int num=top.data;
+	 this.top=this.top.next;
+	 return num;
+ }
+ public boolean isEmpty()
+ {
+	 return this.top==null;
+ }
+}
