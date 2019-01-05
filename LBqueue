@@ -1,0 +1,43 @@
+public class LBDuiLie 
+{
+	Node head=null;
+	Node tail=null;
+	public  LBDuiLie()
+	{
+		this.head=null;
+		this.tail=null;
+	}
+	
+	public boolean inQueue(int num)
+	{
+		Node p=new Node(num);
+		if(head==null)
+		{
+			head=tail=p;
+		}
+		else
+		{
+			tail.next=p;
+			tail=p;
+		}
+		return true;
+	}
+	public int outQueue()
+	{
+		if(head==null)
+			return -1;
+		int num=head.data;
+		head=head.next;
+		return num;
+	}
+	public boolean isEmpty()
+	{
+		return head==null;
+	}
+	public int  isFull()
+	{
+		if(head==null)
+			return -1;
+		return head.data;
+	}
+}
